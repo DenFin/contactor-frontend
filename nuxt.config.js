@@ -39,5 +39,8 @@ export default {
         families: {
             Poppins: true
         }
+    },
+    generate: {
+        dir: 'public'
     }
 }
