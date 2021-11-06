@@ -37,7 +37,7 @@ export default {
     build: {},
     googleFonts: {
         families: {
-            Poppins: true
+            Poppins: [300, 400, 500, 700]
         }
     },
     generate: {

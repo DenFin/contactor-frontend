@@ -8,14 +8,11 @@
                         <span class="app-name">Contactor</span>
                     </div>
                     <div>
-                        <h1>Create Your Free Account</h1>
-                        <p>
-                            Already have an Account? <nuxt-link to="/login">Log in</nuxt-link>
-                        </p>
+                        <h1>Log in </h1>
                         <form>
                             <input v-model="email" type="email" name="email" placeholder="E-Mail"><br>
                             <input v-model="password" type="password" name="password" placeholder="Password"><br>
-                            <button class="btn btn--submit" @click.prevent="submit" type="submit">Sign up</button>
+                            <button class="btn btn--submit" @click.prevent="login" type="submit">Log in</button>
                         </form>
                     </div>
                     <div>
@@ -45,10 +42,10 @@ export default {
         }
     },
     methods: {
-        submit(){
+        login(){
             const res = axios({
                 method: 'post',
-                url: 'https://contactor.herokuapp.com/auth/signup',
+                url: 'https://contactor.herokuapp.com/auth/login',
                 data: {
                     email: this.email,
                     password: this.password
@@ -57,7 +54,7 @@ export default {
                 .then( (response) => {
                     console.log(response)
                     if(response.status === 200){
-                        this.$router.push('/verfication')
+                        this.$router.push('/dashboard')
                     }
                 })
         }
