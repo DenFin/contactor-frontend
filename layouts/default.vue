@@ -1,16 +1,11 @@
 <template>
-  <Nuxt />
+  <div>
+    <Nuxt />
+  </div>
 </template>
 
-<script>
-export default {
-
-}
-</script>
-
 <style lang="sass">
-$blue: #0a2463
-$white: #ffffff
+
 
 
 *

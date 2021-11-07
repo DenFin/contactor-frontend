@@ -1,15 +1,16 @@
 <template>
-  <div>
+  <main>
       <h1>Dashboard</h1>
-  </div>
+  </main>
 </template>
 
 <script>
 export default {
-
+  layout: 'loggedIn'
 }
 </script>
 
-<style>
-
+<style lang="sass">
+main
+    padding: 1rem 3rem
 </style>
