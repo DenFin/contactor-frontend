@@ -15,6 +15,7 @@
                         <form>
                             <input v-model="email" type="email" name="email" placeholder="E-Mail"><br>
                             <input v-model="password" type="password" name="password" placeholder="Password"><br>
+                            <input v-model="confirmPassword" type="password" name="confirm-password" placeholder="Confirm Password"><br>
                             <button class="btn btn--submit" @click.prevent="submit" type="submit">Sign up</button>
                         </form>
                     </div>
@@ -41,14 +42,15 @@ export default {
     data(){
         return {
             email: '',
-            password: ''
+            password: '',
+            confirmPassword: ''
         }
     },
     methods: {
         submit(){
             const res = axios({
                 method: 'post',
-                url: 'https://contactor.herokuapp.com/auth/signup',
+                url: 'https://deploy-test0.herokuapp.com/auth/signup',
                 data: {
                     email: this.email,
                     password: this.password
@@ -85,6 +87,8 @@ $white: #ffffff
 
 .left
     width: 30%
+    @media($laptop)
+        padding: 8rem
 
 
 .right

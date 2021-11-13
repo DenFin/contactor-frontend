@@ -50,4 +50,13 @@ main
 
 h1
     margin-top: 0
+
+table, table th, table td
+    border: 1px solid #333
+    border-spacing: 0
+
+table th, table td
+    padding: 5px
+    text-align: left
+
 </style>

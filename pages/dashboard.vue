@@ -1,11 +1,13 @@
 <template>
   <main>
-      <h1>Dashboard</h1>
+      <page-headline headline="Dashboard"></page-headline>
   </main>
 </template>
 
 <script>
+import PageHeadline from '../components/PageHeadline.vue'
 export default {
+  components: { PageHeadline },
   layout: 'loggedIn'
 }
 </script>

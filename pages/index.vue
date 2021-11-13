@@ -30,15 +30,22 @@ $blue: #0a2463
 $lighterBlue: #144bc9
 $white: #ffffff
 
+// .row
+//   @media($smallDevices)
+//     flex-direction: column-reverse
+
 .page
   background: $blue
   color: $white
 
   h1
     margin-top: 0
-    font-size: 4.8rem
     line-height: 1.3
     font-weight: bold
+    font-size: 2.8rem
+
+    @media($laptop)
+      font-size: 4.8rem
 
   p
     font-size: 2rem
@@ -48,23 +55,6 @@ $white: #ffffff
   min-height: 100vh
   display: flex
   align-items: center
-
-.container
-  max-width: 1400px
-  margin: 0 auto
-  width: 100%
-
-.row
-  display: flex
-  flex-direction: row
-  align-items: center
-
-.col-xs-12
-  padding: 0 2rem
-
-.col-lg-6
-  flex-basis: 50%
-  max-width: 50%
 
 a
   color: $white

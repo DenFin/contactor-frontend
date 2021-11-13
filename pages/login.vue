@@ -45,7 +45,7 @@ export default {
         login(){
             const res = axios({
                 method: 'post',
-                url: 'https://contactor.herokuapp.com/auth/login',
+                url: 'https://deploy-test0.herokuapp.com/auth/login',
                 data: {
                     email: this.email,
                     password: this.password
