@@ -14,7 +14,7 @@
                         </p>
                         <form>
                             <input v-model="email" type="email" name="email" placeholder="E-Mail"><br>
-                            <input v-model="password" type="password" name="password" placeholder="Password"><br>
+                            <input @keyup="validatePassword" v-model="password" type="password" name="password" placeholder="Password"><br>
                             <input v-model="confirmPassword" type="password" name="confirm-password" placeholder="Confirm Password"><br>
                             <button class="btn btn--submit" @click.prevent="submit" type="submit">Sign up</button>
                         </form>
@@ -62,6 +62,15 @@ export default {
                         this.$router.push('/verfication')
                     }
                 })
+        },
+        validatePassword($evt){
+            if($evt){
+                if( $evt.target._value.length < 8 ) {
+                    console.log("password too short")
+                }
+
+            }
+            console.log($evt.target._value.length)
         }
     }
 }
