@@ -50,10 +50,11 @@ export default {
         submit(){
             const res = axios({
                 method: 'post',
-                url: 'https://deploy-test0.herokuapp.com/auth/signup',
+                url: 'https://contactor.herokuapp.com/auth/signup',
                 data: {
                     email: this.email,
-                    password: this.password
+                    password: this.password,
+                    confirmPassword: this.confirmPassword
                 } 
             })
                 .then( (response) => {
